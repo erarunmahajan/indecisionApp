@@ -1,0 +1,36 @@
+
+.add-option__error{
+    color:$off-white;
+    padding:0 $m-size;
+    font-style: italic;
+    font-size: $m-size;
+    margin: $m-size 0 $m-size 0;
+}
+.add-option{
+    display: flex;
+    flex-direction:column ;
+    padding: $xs-size;
+    background-color: $blue;
+}
+.add-option__input-text{
+    background:$dark-blue;
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    border-bottom: .3rem solid darken($color: $dark-blue, $amount: 10%);
+    color: $off-white;
+    padding: $s-size;
+    margin: 0 0 $s-size 0;
+}
+
+@media (min-width:$desktop-breakpoint){
+    .add-option{
+        flex-direction: row;
+        padding: $xs-size;
+
+    }
+    .add-option__input-text{
+        margin: 0 $s-size 0 0;
+    }
+
+}

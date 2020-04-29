@@ -1,0 +1,12 @@
+.option{
+    color: $off-white;
+    display: flex;
+    justify-content: space-between;
+    padding:0 $s-size;
+    border-bottom: 1px solid darken($color: $off-white, $amount: 20%);
+}
+.option__text{
+    font-weight: 500;
+    word-break: break-all;
+    margin-right: .2rem;
+}

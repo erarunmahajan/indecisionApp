@@ -1,0 +1,59 @@
+
+class OldSyntax {
+    constructor(){
+        this.name='arun'
+        this.getGreetings = this.getGreetings.bind(this)
+    }
+    getGreetings(){
+        return 'Hi, My name is '+ this.name
+    }
+}
+const oldSyntax = new OldSyntax()
+const getGreetings = oldSyntax.getGreetings()
+console.log(getGreetings)
+
+//---------------------class syntax
+
+class NewSyntax {
+    name = 'mahajan'
+    getGreetings =()=>{
+        return 'Hi, My name is '+ this.name
+    }
+
+}
+
+const newsyntax = new NewSyntax();
+const newGetgreet = newsyntax.getGreetings()
+console.log(newGetgreet)
+
+
+
+const Layout = (props)=>{
+    return(
+        <div>
+            <p>header note</p>
+            {props.children}
+            <p>Footer</p>
+        </div>
+    )
+}
+
+const template = (
+    <div>
+        <h1>Page Title</h1>
+        <p>This is my page</p>
+    </div>
+);
+
+
+
+
+
+// ReactDOM.render(<Layout content={template}/>,RENDER_ELEMENT)
+ReactDOM.render((<Layout>
+                    <div>
+                        <h1>Page Title</h1>
+                        <p>This is my page</p>
+                    </div>
+                </Layout>
+                    ),RENDER_ELEMENT)

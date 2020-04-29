@@ -1,0 +1,27 @@
+.header{
+    background: $off-black;
+    margin-bottom: $s-size;
+    padding: $m-size 0;
+    color: white ;
+}
+//bem block element identifier
+.header__title{
+    font-size: $m-size;
+    margin: 0 0 $xs-size 0;
+}
+.header__subtitle{
+    color:$off-white;
+    font-size: $m-size;
+    margin:0;
+    font-weight: 500;
+}
+
+@media (min-width:$desktop-breakpoint){
+    .header{
+        margin-bottom: $l-size;
+    }
+    .header__title{
+        font-size: $l-size;
+        margin-bottom: $xs-size;
+    }
+}
